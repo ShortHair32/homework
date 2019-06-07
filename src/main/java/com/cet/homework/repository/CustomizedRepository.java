@@ -5,6 +5,6 @@ import org.springframework.data.repository.NoRepositoryBean;
 
 
 @NoRepositoryBean
-public interface CustomizedRepoistory<T, ID> extends JpaRepository<T, ID> {
+public interface CustomizedRepository<T, ID> extends JpaRepository<T, ID> {
     T refresh(T t);
 }
