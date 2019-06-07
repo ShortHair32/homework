@@ -3,6 +3,7 @@ import com.cet.homework.entity.User;
 import com.cet.homework.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -10,6 +11,7 @@ import java.util.Map;
 @Slf4j
 @RestController
 @RequestMapping("/api/admin")
+@Transactional
 public class AdminController {
     @Autowired
     private UserService userservice;
