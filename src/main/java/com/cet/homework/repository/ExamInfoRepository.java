@@ -18,10 +18,10 @@ public class ExamInfoRepository {
      * @param examInfo
      * @return
      */
-   public ExamInfo addExamInfo(ExamInfo examInfo){
+   public void addExamInfo(ExamInfo examInfo){
 
        em.persist(examInfo);
-       return examInfo;
+       
    }
 
 }
