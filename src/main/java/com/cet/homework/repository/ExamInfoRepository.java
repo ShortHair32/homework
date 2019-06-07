@@ -1,23 +1,27 @@
 package com.cet.homework.repository;
 
 import com.cet.homework.entity.ExamInfo;
-import com.cet.homework.entity.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+//白
 //监考信息持久化
 @Repository
 @Transactional
-public interface ExamInfoRepository extends JpaRepository<ExamInfo, Integer> {
+public class ExamInfoRepository {
+    @PersistenceContext
+    private EntityManager em;
     /**
-     * 获取指定ID的监考信息
-     * @param id
+     * 添加监考信息
+     * @param examInfo
      * @return
      */
-    @Query("SELECT e FROM ExamInfo e WHERE e.id=:id")
-    ExamInfo find(@Param("id") int id);
+   public ExamInfo addExamInfo(ExamInfo examInfo){
+
+       em.persist(examInfo);
+       return examInfo;
+   }
 
 }
