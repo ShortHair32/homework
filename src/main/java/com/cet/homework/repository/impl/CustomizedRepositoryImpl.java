@@ -6,11 +6,11 @@ import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 
 import javax.persistence.EntityManager;
 
-public class CustomizedRespositoryImpl<T, ID> extends SimpleJpaRepository<T, ID> implements CustomizedRepoistory<T, ID> {
+public class CustomizedRepositoryImpl<T, ID> extends SimpleJpaRepository<T, ID> implements CustomizedRepository<T, ID> {
     private EntityManager entityManager;
 
-    public CustomizedRespositoryImpl(JpaEntityInformation entityInformation,
-                                     EntityManager entityManager) {
+    public CustomizedRepositoryImpl(JpaEntityInformation entityInformation,
+                                    EntityManager entityManager) {
         super(entityInformation, entityManager);
         this.entityManager = entityManager;
     }
