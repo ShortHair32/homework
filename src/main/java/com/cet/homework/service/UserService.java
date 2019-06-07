@@ -12,6 +12,12 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
     public User getUser(int number) {
-        return userRepository.find(number);
+        return userRepository.findUser(number);
+    }
+    public void addUser(User u){
+        userRepository.addUser(u);
+    }
+    public void updateUser(int uid, String newName){
+        userRepository.updateUser(uid,newName);
     }
 }
