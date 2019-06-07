@@ -13,6 +13,9 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity
 public class ExamInfo {
+    public static final int NOT_ALLOCATED = 1;
+    public static final int ALLOCATED = 2;
+    public static final int FINISH = 3;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -22,6 +25,8 @@ public class ExamInfo {
     private String className; /*课程*/
     // 在没有声明时默认为1
     private int needCount =1 ;  /*所需人数*/
+    //在没有声明时默认为 1
+    private int status =1;  /*监考信息状态*/
     @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
             updatable = false,
             insertable = false)
