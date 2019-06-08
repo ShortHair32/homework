@@ -7,3 +7,21 @@ POST http://localhost:8080/api/admin/usermanagement
 
 ###
 
+POST http://localhost:8080/api/admin/usermanagement
+
+{
+  "phone": 123
+  "name": aaa
+}
+
+###
+
+POST http://localhost:8080/api/admin/usermanagement
+
+{
+  "phone": 123
+  "name": aaa
+}
+
+###
+
