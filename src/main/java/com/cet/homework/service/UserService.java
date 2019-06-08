@@ -23,10 +23,8 @@ public class UserService {
         userRepository.save(u);
         return userRepository.refresh(u);
     }
-    public User updateUser(int uid, String newName){
-        User u=userRepository.findById(uid).get();
-        u.setName(newName);
-        return userRepository.save(u);
+    public void removeUser(int uid){
+        userRepository.deleteById(uid);
     }
     public List<User> listusers(){
         return userRepository.listusers();

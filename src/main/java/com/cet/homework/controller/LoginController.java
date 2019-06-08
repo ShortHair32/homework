@@ -44,6 +44,7 @@ public class LoginController {
                     // 生成加密token
                     String token = encryptorComponent.encrypt(map);
                     // 在header创建自定义的权限
+                    response.setHeader("uid", "u.getId()");
                     response.setHeader("token", token);
                     String role = null;
                     if (u.getAuthority() == User.USER_AUTHORITY) {
