@@ -20,8 +20,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
         //注入拦截器
         registry.addInterceptor(loginInterceptor)
                 .addPathPatterns("/api/**")//拦截路径规则，login下的所有请求
-                .excludePathPatterns("/api/login");//拦截排除规则
-        registry.addInterceptor(adminInterceptor)
+                .excludePathPatterns("/api/login","/api/admin/register");//拦截排除规则
+       registry.addInterceptor(adminInterceptor)
                 .addPathPatterns("/api/admin");
     }
 }

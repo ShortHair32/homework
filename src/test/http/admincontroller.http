@@ -1,8 +1,10 @@
 POST http://localhost:8080/api/admin/usermanagement
+Content-Type: application/json
 
 {
-  "phone": 123
-  "name": aaa
+  "phone": "13832507114",
+  "name": "wang",
+  "password":"123456"
 }
 
 ###
@@ -11,8 +13,19 @@ POST http://localhost:8080/api/login
 Content-Type: application/json
 
 {
-  "phone": "15546503308",
-  "password": "123456"
+  "phone": "1044919284",
+  "password": "blakegriffin32",
+  "authority": 2
+}
+
+###
+POST http://localhost:8080/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "1044919284",
+  "name": "wangjiaqi",
+  "password":"blakegriffin32"
 }
 
 ###

@@ -32,11 +32,11 @@ public class LoginController {
 
     @PostMapping("/login")
     //传入一个user的json
-    public void login(@RequestBody User user, HttpServletResponse response) {
+    public void login(@RequestBody Map<String,String> user, HttpServletResponse response) {
         //通过手机号get到用户，然后用passwordencoder中方法判断输入的密码和user中的密码是否匹配
-        Optional.ofNullable(userService.getUser(user.getPhone()))
+        Optional.ofNullable(userService.getUser(user.get("phone")))
                 .ifPresentOrElse(u -> {
-                    if (!passwordEncoder.matches(user.getPassword(), u.getPassword())) {
+                    if (!passwordEncoder.matches(user.get("password"), u.getPassword())) {
                         throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
                     }
                     //用用户的id和职称构成map生成令牌
@@ -53,7 +53,7 @@ public class LoginController {
                     }
                     response.setHeader("role", role);
                 }, () -> {
-                    throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
+                    throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户不存在");
                 });
     }
 }
