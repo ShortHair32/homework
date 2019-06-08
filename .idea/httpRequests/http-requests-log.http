@@ -5,6 +5,17 @@ POST http://localhost:8080/api/admin/usermanagement
   "name": aaa
 }
 
+<> 2019-06-08T010754.401.json
+
+###
+
+POST http://localhost:8080/api/admin/usermanagement
+
+{
+  "phone": 123
+  "name": aaa
+}
+
 ###
 
 POST http://localhost:8080/api/admin/usermanagement
