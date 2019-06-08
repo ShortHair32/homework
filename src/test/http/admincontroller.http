@@ -1,8 +1,9 @@
 POST http://localhost:8080/api/admin/usermanagement
 
 {
-  "phone": 123
-  "name": aaa
+  "phone": "13832507114",
+  "name": "wang"
+  "password":"123456"
 }
 
 ###
@@ -12,7 +13,8 @@ Content-Type: application/json
 
 {
   "phone": "15546503308",
-  "password": "123456"
+  "password": "123456",
+  "authority": 2
 }
 
 ###
