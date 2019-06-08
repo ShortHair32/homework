@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
 import java.util.Optional;
 
 //白
@@ -28,5 +29,9 @@ public class ExamInfoService {
                 })
                 .map(a -> examInfoRepository.save(examInfo))
                 .get();
+    }
+
+    public List<ExamInfo> listexamInfo(int status){
+        return examInfoRepository.listexamInfos(status);
     }
 }
