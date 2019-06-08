@@ -31,7 +31,8 @@ public class ExamInfoService {
                 .get();
     }
 
-    public List<ExamInfo> listexamInfo(int status){
-        return examInfoRepository.listexamInfos(status);
+    public  ExamInfo getExamInfo(String classroom){return examInfoRepository.findExamInfo(classroom);}
+    public List<ExamInfo> listexamInfos(){
+        return examInfoRepository.listexamInfos();
     }
 }
