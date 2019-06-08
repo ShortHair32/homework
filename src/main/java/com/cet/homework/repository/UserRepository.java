@@ -12,9 +12,9 @@ import java.util.List;
 @Repository
 @Transactional
 public interface UserRepository extends CustomizedRepository<User, Integer>{
-    //根据id查找用户
-    @Query("SELECT u FROM User u WHERE u.id=:id")
-    public User findUser(@Param("id") int id);
+    //根据手机号查找用户
+    @Query("SELECT u FROM User u WHERE u.number=:number")
+    public User findUser(@Param("number") String number);
     //列出所有用户
     @Query("SELECT u FROM User u")
     public List<User> listusers();
