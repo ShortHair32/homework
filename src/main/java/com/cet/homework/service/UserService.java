@@ -16,7 +16,7 @@ import java.util.List;
 public class UserService {
     @Autowired
     private UserRepository userRepository;
-    public User getUser(int number) {
+    public User getUser(String number) {
         return userRepository.findUser(number);
     }
     public User addUser(User u){
