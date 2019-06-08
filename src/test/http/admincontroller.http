@@ -6,3 +6,13 @@ POST http://localhost:8080/api/admin/usermanagement
 }
 
 ###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "phone": "15546503308",
+  "password": "123456"
+}
+
+###
