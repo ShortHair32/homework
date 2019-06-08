@@ -21,7 +21,7 @@ public class ExamInfo {
     private int id;
     private LocalDateTime beginTime;   /*起始时间*/
     private LocalDateTime endTime;    /*结束时间*/
-    private String classRome;         /*地点*/
+    private String classRoom;         /*地点*/
     private String className; /*课程*/
     // 在没有声明时默认为1
     private int needCount =1 ;  /*所需人数*/

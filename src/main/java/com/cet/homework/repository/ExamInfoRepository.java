@@ -18,6 +18,6 @@ public interface ExamInfoRepository extends CustomizedRepository<ExamInfo, Integ
      *根据教室查找考试信息
      */
 
-    @Query("SELECT e FROM ExamInfo e WHERE e.classRome=:classRome")
-    ExamInfo findExamInfo(@Param("classRome") String classRome);
+    @Query("SELECT e FROM ExamInfo e WHERE e.classRoom=:classRoom")
+    ExamInfo findExamInfo(@Param("classRoom") String classRoom);
 }
