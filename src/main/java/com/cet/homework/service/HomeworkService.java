@@ -13,11 +13,12 @@ import java.util.List;
 public class HomeworkService {
     @Autowired
     private HomeworkRepository homeworkRepository;
-
+    //添加
     public Homework addHomework(Homework homework) {
         homeworkRepository.save(homework);
         return homeworkRepository.refresh(homework);
     }
+    //根据老师ID查找homework
     public List<Homework> listTeacherHomeworks(int tid) {
         return homeworkRepository.list(tid);
     }
