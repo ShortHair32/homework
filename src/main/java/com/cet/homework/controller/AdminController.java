@@ -32,4 +32,19 @@ public class AdminController {
     user.setPassword(passwordEncoder.encode(user.getPassword()) );
     userservice.addUser(user);
     }
+    //管理员修改指定用户信息
+    //也能改变人员权限
+    //service层用了save，即相当于更新
+    @PostMapping("/modify")
+    public void modify(@RequestBody User user){
+        user.setPassword(passwordEncoder.encode(user.getPassword()) );
+        userservice.addUser(user);
+    }
+    //删除管理员（是将其权限降级还是删除这个人？）
+    //根据手机号找到用户，再根据ID删除用户
+    //用户和管理员都能删除
+    @PostMapping("/removeadmin")
+    public void removeadmin(@RequestAttribute String phone){
+        userservice.removeUser(userservice.getUser(phone).getId());
+    }
 }

@@ -10,9 +10,11 @@ import com.cet.homework.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -27,7 +29,8 @@ public class UserController {
     private ExamInfoService examInfoService;
     @Autowired
     private HomeworkService homeworkService;
-
+    @Autowired
+    private PasswordEncoder passwordEncoder;
     /**
      * 仅主页面时，加载全部课程
      * @param uid
@@ -40,5 +43,10 @@ public class UserController {
             homework = homeworkService.listTeacherHomeworks(uid);
         return Map.of("homework", homework);
     }
-
+    //用户修改自己的信息,在前端控制id无法更改，默认为当前用户
+    @PostMapping("/modify")
+    public void modify(@RequestBody User user){
+        user.setPassword(passwordEncoder.encode(user.getPassword()) );
+        userService.addUser(user);
+    }
 }
