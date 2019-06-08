@@ -9,6 +9,54 @@ Content-Type: application/json
 
 ###
 
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "phone": "1044919284",
+  "password": "blakegriffin3",
+  "authority": 2
+}
+
+<> 2019-06-08T022948.401.json
+
+###
+
+POST http://localhost:8080/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "1044919284",
+  "name": "wangjiaqi",
+  "password":"blakegriffin32"
+}
+
+###
+
+POST http://localhost:8080/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "1044919284",
+  "name": "wangjiaqi",
+  "password":"blakegriffin32"
+}
+
+<> 2019-06-08T022805.401.json
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "phone": "1044919284",
+  "password": "blakegriffin32",
+  "authority": 2
+}
+
+###
+
 POST http://localhost:8080/api/admin/register
 Content-Type: application/json
 
