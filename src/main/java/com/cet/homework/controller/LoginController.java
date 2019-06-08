@@ -31,6 +31,7 @@ public class LoginController {
     private EncryptorComponent encryptorComponent;
 
     @PostMapping("/login")
+    //传入一个user的json
     public void login(@RequestBody User user, HttpServletResponse response) {
         //通过手机号get到用户，然后用passwordencoder中方法判断输入的密码和user中的密码是否匹配
         Optional.ofNullable(userService.getUser(user.getPhone()))
