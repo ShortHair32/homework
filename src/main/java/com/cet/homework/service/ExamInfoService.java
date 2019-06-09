@@ -35,4 +35,12 @@ public class ExamInfoService {
     public List<ExamInfo> listexamInfos(){
         return examInfoRepository.listexamInfos();
     }
+    //查询某个教师有多少监考任务
+    public int count(int tid){
+        return examInfoRepository.count(tid);
+    }
+    //通知短信
+    public List<ExamInfo> queryownexaminfo(int tid){
+        return examInfoRepository.queryownexaminfo(tid);
+    }
 }

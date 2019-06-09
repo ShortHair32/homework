@@ -23,4 +23,10 @@ public interface ExamInfoRepository extends CustomizedRepository<ExamInfo, Integ
     ExamInfo findExamInfo(@Param("classRoom") String classRoom);
     @Query("SELECT e FROM ExamInfo e")
     List<ExamInfo> listexamInfos();
+    //根据教师查询有几个监考任务
+    @Query("SELECT COUNT(id) FROM ExamInfo e WHERE e.teacher.id=:tid")
+    int count (@Param("tid") int tid);
+    //查询教师分配给自己的监考任务（通知短信）
+    @Query("SELECT e FROM ExamInfo e WHERE e.teacher.id=:tid")
+    List<ExamInfo> queryownexaminfo(@Param("tid") int tid);
 }

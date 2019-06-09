@@ -32,4 +32,8 @@ public class UserService {
     public List<User> listusers(){
         return userRepository.listusers();
     }
+    //列出所有教师
+    public List<User> listteachers(){
+        return userRepository.listteachers();
+    }
 }
