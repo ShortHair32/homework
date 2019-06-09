@@ -19,7 +19,7 @@ public class HomeworkDetail {
     @Column(columnDefinition = "TEXT")
     private String solution;
     @ManyToOne(fetch = FetchType.LAZY)
-    private User student;
+    private User user;
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(unique=true)
     private Homework homework;

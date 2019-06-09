@@ -15,4 +15,6 @@ public interface HomeworkDetailRepository extends CustomizedRepository<HomeworkD
     /*//根据任务id查找homework完成情况
     @Query("SELECT hd FROM HomeworkDetail hd WHERE hd.homework.id=:hid")
     HomeworkDetail findhomeworkdetailbyhomeworkid(@Param("hid") int hid);*/
+    @Query("SELECT hd FROM HomeworkDetail hd")
+    List <HomeworkDetail> listhomeworkdetails();
 }

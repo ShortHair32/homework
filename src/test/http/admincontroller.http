@@ -26,6 +26,8 @@ Content-Type: application/json
   "phone": "1044919284",
   "name": "wangjiaqi",
   "password":"blakegriffin32"
+  user{
+}
 }
 
 ###
