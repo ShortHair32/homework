@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,9 +20,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String phone;   /*手机号码*/
-    private String name;
+    private String name;    /*姓名*/
     private String detail; /*简介*/
     private String post;  /*职称*/
+    @OneToMany(mappedBy = "user")
+    List<Homework> homeworks;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     // 在没有声明时默认为1

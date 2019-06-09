@@ -19,13 +19,16 @@ public class UserService {
     public User getUser(String number) {
         return userRepository.findUser(number);
     }
+    //既能创建也能修改，万能SAVE
     public User addUser(User u){
         userRepository.save(u);
         return userRepository.refresh(u);
     }
+    //删除指定用户
     public void removeUser(int uid){
         userRepository.deleteById(uid);
     }
+    //列出所有用户
     public List<User> listusers(){
         return userRepository.listusers();
     }

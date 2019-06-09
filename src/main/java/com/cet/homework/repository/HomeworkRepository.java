@@ -11,11 +11,13 @@ import java.util.List;
 @Repository
 @Transactional
 public interface HomeworkRepository extends CustomizedRepository<Homework, Integer> {
-    /*
-    根据老师ID查找homework
-     */
-
-    @Query("SELECT h FROM Homework h WHERE h.teacher.id=:tid ")
-    List<Homework> list(@Param("tid") int tid);
-
+    //根据用户ID查找homework
+    @Query("SELECT h FROM Homework h WHERE h.user.id=:uid ")
+    List<Homework> findHomeworkbyuid(@Param("uid") int uid);
+    //列出所有任务
+    @Query("SELECT h FROM Homework ")
+    List<Homework> listhomeworks();
+    //根据任务id查找homework
+    @Query("SELECT h FROM Homework h WHERE h.id=:hid ")
+    Homework findHomeworkbyhid(@Param("hid") int hid);
 }

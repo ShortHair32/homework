@@ -1,5 +1,6 @@
 package com.cet.homework.controller;
 import com.cet.homework.entity.User;
+import com.cet.homework.service.HomeworkService;
 import com.cet.homework.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,8 @@ public class AdminController {
     private UserService userservice;
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    private HomeworkService homeworkService;
     /**
      * 添加用户，并返回所有用户信息
      */
@@ -46,5 +49,10 @@ public class AdminController {
     @PostMapping("/removeadmin")
     public void removeadmin(@RequestAttribute String phone){
         userservice.removeUser(userservice.getUser(phone).getId());
+    }
+    //关闭任务
+    @PostMapping("/closehomework")
+    public void closehomework(@RequestAttribute int id){
+        homeworkService.close(id);
     }
 }

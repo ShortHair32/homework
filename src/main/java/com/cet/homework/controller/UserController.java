@@ -32,15 +32,12 @@ public class UserController {
     @Autowired
     private PasswordEncoder passwordEncoder;
     /**
-     * 仅主页面时，加载全部课程
-     * @param uid
-     * @param aid
-     * @return
+     * 列出全部任务
      */
     @GetMapping("/main")
-    public Map getMain(@RequestAttribute int uid, @RequestAttribute int aid) {
+    public Map getMain(){
         List<Homework> homework = null;
-            homework = homeworkService.listTeacherHomeworks(uid);
+            homework = homeworkService.listhomeworks();
         return Map.of("homework", homework);
     }
     //用户修改自己的信息,在前端控制id无法更改，默认为当前用户id
