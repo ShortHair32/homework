@@ -43,7 +43,7 @@ public class UserController {
             homework = homeworkService.listTeacherHomeworks(uid);
         return Map.of("homework", homework);
     }
-    //用户修改自己的信息,在前端控制id无法更改，默认为当前用户
+    //用户修改自己的信息,在前端控制id无法更改，默认为当前用户id
     @PostMapping("/modify")
     public void modify(@RequestBody User user){
         user.setPassword(passwordEncoder.encode(user.getPassword()) );
