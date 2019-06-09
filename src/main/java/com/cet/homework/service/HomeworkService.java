@@ -23,7 +23,7 @@ public class HomeworkService {
         return homeworkRepository.listhomeworks();
     }
     //根据老师ID查找homework
-    public List<Homework> findHomework(int uid) {
+    public List<Homework> findHomeworkbyuid(int uid) {
         return homeworkRepository.findHomeworkbyuid(uid);
     }
     //关闭任务,根据任务id查

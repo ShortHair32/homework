@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -34,7 +35,7 @@ public class UserController {
     /**
      * 列出全部任务
      */
-    @GetMapping("/main")
+    @GetMapping("/allhomework")
     public Map getMain(){
         List<Homework> homework = null;
             homework = homeworkService.listhomeworks();
@@ -45,5 +46,12 @@ public class UserController {
     public void modify(@RequestBody User user){
         user.setPassword(passwordEncoder.encode(user.getPassword()) );
         userService.addUser(user);
+    }
+    //列出自己的任务
+    @GetMapping("myhomework")
+    public Map myhomework(@RequestAttribute int uid){
+        List<Homework> homework = null;
+        homework = homeworkService.findHomeworkbyuid(uid);
+        return Map.of("homework", homework);
     }
 }

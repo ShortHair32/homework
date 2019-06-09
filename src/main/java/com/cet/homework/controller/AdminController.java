@@ -1,4 +1,5 @@
 package com.cet.homework.controller;
+import com.cet.homework.entity.Homework;
 import com.cet.homework.entity.User;
 import com.cet.homework.service.HomeworkService;
 import com.cet.homework.service.UserService;
@@ -29,7 +30,7 @@ public class AdminController {
         userservice.addUser(user);
         return Map.of("users", userservice.listusers());
     }
-    //注册
+    //管理员注册
     @PostMapping("/register")
     public void register(@RequestBody User user){
     user.setPassword(passwordEncoder.encode(user.getPassword()) );
@@ -54,5 +55,15 @@ public class AdminController {
     @PostMapping("/closehomework")
     public void closehomework(@RequestAttribute int id){
         homeworkService.close(id);
+    }
+    //创建任务
+    @PostMapping("/addhomework")
+    public void addhomework(@RequestBody Homework homework){
+        homeworkService.addHomework(homework);
+    }
+    //修改任务
+    @PostMapping("/modifyhomework")
+    public void modifyhomework(@RequestBody Homework homework){
+        homeworkService.addHomework(homework);
     }
 }
