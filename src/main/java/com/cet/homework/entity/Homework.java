@@ -17,13 +17,15 @@ public class Homework {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    public static final int ON = 1;
+    public static final int OFF = 2;
     // 任务名称
     private String title;
     // 任务内容，普通长度可能不够
     @Column(columnDefinition = "TEXT")
     private String content;
     @ManyToOne(fetch = FetchType.LAZY)
-    private User teacher;
+    private User user;
     //截止日期
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime deadLineTime;
@@ -31,6 +33,8 @@ public class Homework {
             updatable = false,
             insertable = false)
     private LocalDateTime insertTime;
+    //默认创建即开始
+    private int state=ON;
     public Homework(int id) {
         this.id = id;
     }
