@@ -25,6 +25,8 @@ public class User {
     private String post;  /*职称*/
     @OneToMany(mappedBy = "user")
     List<Homework> homeworks;
+    @OneToMany(mappedBy = "teacher")
+    List<ExamInfo> examinfos;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     // 在没有声明时默认为1

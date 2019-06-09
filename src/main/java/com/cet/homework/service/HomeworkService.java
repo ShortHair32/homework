@@ -45,4 +45,8 @@ public class HomeworkService {
         homeworkDetailRepository.save(homeworkDetail);
         return homeworkDetailRepository.refresh(homeworkDetail);
     }
+    //列出所有已完成任务的回复信息
+    public List<HomeworkDetail> listallhomeworkdetails(){
+        return homeworkDetailRepository.listhomeworkdetails();
+    }
 }

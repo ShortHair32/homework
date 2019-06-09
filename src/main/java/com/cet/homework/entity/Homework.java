@@ -25,7 +25,7 @@ public class Homework {
     @Column(columnDefinition = "TEXT")
     private String content;
     @ManyToOne(fetch = FetchType.LAZY)
-    private User user;
+    private User teacher;
     @OneToOne(mappedBy = "homework")
     private HomeworkDetail homeworkDetail;
     //截止日期
