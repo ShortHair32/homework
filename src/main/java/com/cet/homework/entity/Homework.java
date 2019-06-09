@@ -26,6 +26,8 @@ public class Homework {
     private String content;
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
+    @OneToOne(mappedBy = "homework")
+    private HomeworkDetail homeworkDetail;
     //截止日期
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime deadLineTime;
