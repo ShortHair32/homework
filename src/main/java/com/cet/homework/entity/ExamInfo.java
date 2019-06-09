@@ -33,6 +33,8 @@ public class ExamInfo {
     private LocalDateTime insertTime;
     @ManyToOne(fetch = FetchType.LAZY)
     private User teacher;
+    @OneToOne(mappedBy = "examInfo")
+    private ExamInfoDetail examInfoDetail;
     public ExamInfo(int id) {
         this.id= id;
     }
