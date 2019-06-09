@@ -18,4 +18,7 @@ public interface UserRepository extends CustomizedRepository<User, Integer>{
     //列出所有用户
     @Query("SELECT u FROM User u")
     public List<User> listusers();
+    //列出所有教师
+    @Query("SELECT u FROM User u WHERE u.authority=User.USER_AUTHORITY")
+    public List<User> listteachers();
 }

@@ -11,7 +11,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
+import java.util.*;
+
 //王嘉奇
 @Slf4j
 @RestController
@@ -76,10 +77,11 @@ public class AdminController {
         examInfoService.addExamInfo(examInfo);
         return Map.of("examInfo",examInfoService.listexamInfos());
     }
-    //重新分配教师
+    //重新分配教师,分配都是它
     @PostMapping("/ExamInfo/updateteacher")
-    public void updateTeacher(@RequestBody ExamInfo examInfo){
+    public Map updateTeacher(@RequestBody ExamInfo examInfo){
         examInfoService.updateExamInfo(examInfo);
+        return Map.of("teachers", userservice.listteachers());
     }
     //查找考试信息
     @PostMapping("/ExamInfo/findExamInfo")

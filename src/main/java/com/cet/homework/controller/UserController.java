@@ -60,4 +60,11 @@ public class UserController {
     public void domyhomework(@RequestBody HomeworkDetail homeworkDetail,@RequestAttribute int hid){
         homeworkService.completehomework(homeworkDetail);
     }
+    //列出自己的监考任务
+    @GetMapping("/myexaminfo")
+    public Map myexaminfo(@RequestAttribute int uid){
+        List<ExamInfo> examInfos=null;
+        examInfos=examInfoService.queryownexaminfo(uid);
+        return Map.of("examinfos", examInfos);
+    }
 }
