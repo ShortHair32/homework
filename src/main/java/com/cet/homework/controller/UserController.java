@@ -3,6 +3,7 @@ package com.cet.homework.controller;
 
 import com.cet.homework.entity.ExamInfo;
 import com.cet.homework.entity.Homework;
+import com.cet.homework.entity.HomeworkDetail;
 import com.cet.homework.entity.User;
 import com.cet.homework.service.ExamInfoService;
 import com.cet.homework.service.HomeworkService;
@@ -48,10 +49,15 @@ public class UserController {
         userService.addUser(user);
     }
     //列出自己的任务
-    @GetMapping("myhomework")
+    @GetMapping("/myhomework")
     public Map myhomework(@RequestAttribute int uid){
         List<Homework> homework = null;
         homework = homeworkService.findHomeworkbyuid(uid);
         return Map.of("homework", homework);
+    }
+    //完成任务
+    @PostMapping("/domyhomework")
+    public void domyhomework(@RequestBody HomeworkDetail homeworkDetail,@RequestAttribute int hid){
+        homeworkService.completehomework(homeworkDetail);
     }
 }
