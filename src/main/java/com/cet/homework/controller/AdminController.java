@@ -32,6 +32,7 @@ public class AdminController {
      */
     @PostMapping("/usermanagement")
     public Map postUser(@RequestBody User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()) );
         userservice.addUser(user);
         return Map.of("users", userservice.listusers());
     }

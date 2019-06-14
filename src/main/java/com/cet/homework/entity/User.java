@@ -23,7 +23,7 @@ public class User {
     private String name;    /*姓名*/
     private String detail; /*简介*/
     private String post;  /*职称*/
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "teacher")
     List<Homework> homeworks;
     @OneToMany(mappedBy = "teacher")
     List<ExamInfo> examinfos;
