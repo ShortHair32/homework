@@ -5,13 +5,20 @@ import com.cet.homework.entity.User;
 import com.cet.homework.service.ExamInfoService;
 import com.cet.homework.service.HomeworkService;
 import com.cet.homework.service.UserService;
+import com.fasterxml.jackson.core.JsonGenerationException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.*;
+
+
+
 
 //王嘉奇
 @Slf4j
@@ -66,15 +73,15 @@ public class AdminController {
     //用户和管理员都能删除
     //??
     @PostMapping("/removeadmin")
-    public void removeadmin(@RequestBody String phone){
-        userservice.removeUser(userservice.getUser(phone).getId());
+    public void removeadmin(@RequestBody User user){
+        userservice.removeUser(userservice.getUser(user.getPhone()).getId());
     }
     //关闭任务
     //??
     @PostMapping("/closehomework")
 
-    public void closehomework(@RequestBody int id){
-        homeworkService.close(id);
+    public void closehomework(@RequestBody Homework homework){
+        homeworkService.close(homework.getId());
     }
     //创建任务
     //ok
@@ -109,9 +116,8 @@ public class AdminController {
     }
     //根据教室查找考试信息
     @PostMapping("/ExamInfo/getExamInfo")
-    public ExamInfo getExamInfo(@RequestParam(name="classroom") String classroom) {
-        return examInfoService.getExamInfo(classroom);
+    public Map getExamInfo(@RequestBody ExamInfo examInfo) {
+        return Map.of("examInfo",examInfoService.getExamInfo(examInfo.getClassRoom()));
     }
-
 
 }

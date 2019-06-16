@@ -1,5 +1,6 @@
 package com.cet.homework.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,12 +19,13 @@ public class HomeworkDetail {
     //解决情况
     @Column(columnDefinition = "TEXT")
     private String solution;
-    @ManyToOne(fetch = FetchType.LAZY)
-    private User user;
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
+    private User teacher;
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(unique=true)
     private Homework homework;
     @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",
             updatable = false, insertable = false)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime completeTime;
 }

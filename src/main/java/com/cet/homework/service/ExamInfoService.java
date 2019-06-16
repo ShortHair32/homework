@@ -30,7 +30,9 @@ public class ExamInfoService {
         return examInfoRepository.save(e);
     }
 
-    public  ExamInfo getExamInfo(String classroom){return examInfoRepository.findExamInfo(classroom);}
+    public  ExamInfo getExamInfo(String classroom){
+        return examInfoRepository.findExamInfo(classroom);
+    }
     public List<ExamInfo> listexamInfos(){
         return examInfoRepository.listexamInfos();
     }

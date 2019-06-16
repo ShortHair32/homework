@@ -34,7 +34,7 @@ public class ExamInfo {
             updatable = false,
             insertable = false)
     private LocalDateTime insertTime;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private User teacher;
     @OneToOne(mappedBy = "examInfo")
     private ExamInfoDetail examInfoDetail;

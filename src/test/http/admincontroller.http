@@ -45,7 +45,7 @@ Content-Type: application/json
 }
 
 ###
-//??
+//ok
 POST http://localhost:8080/api/admin/removeadmin
 Content-Type: application/json
 
@@ -61,7 +61,7 @@ Content-Type: application/json
 
 
 {
-  "content": "回复信息",
+  "content": "打人",
   "teacher": {
   "id": "3"
   },
@@ -85,6 +85,7 @@ Content-Type: application/json
   "deadLineTime": "2014-01-02 15:00"
 }
 ###
+//ok
 POST http://localhost:8080/api/admin/closehomework
 Content-Type: application/json
 
@@ -100,8 +101,8 @@ Content-Type: application/json
 {
   "beginTime": "2019-06-23 15:00",
   "endTime": "2019-06-23 17:00",
-  "classRoom": "910",
-  "className": "SOA"
+  "classRoom": "911",
+  "className": "SOB"
 }
 ###
 ###
@@ -127,6 +128,6 @@ POST http://localhost:8080/api/admin/ExamInfo/getExamInfo
 Content-Type: application/json
 
 {
-  "classroom": "910"
+  "classRoom":"910"
 }
 ###

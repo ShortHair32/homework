@@ -1,0 +1,48 @@
+###
+//??
+GET http://localhost:8080/api/allhomework
+
+###
+###
+//ok
+POST http://localhost:8080/api/usermodify
+Content-Type: application/json
+
+{
+"id": "5",
+  "phone": "15546309826",
+  "name": "白",
+  "password":"123456",
+  "authority": "1"
+}
+###
+###
+//??
+GET http://localhost:8080/api/myhomework
+Content-Type: application/json
+
+{
+  "id": "3"
+}
+###
+###
+//ok
+POST http://localhost:8080/api/domyhomework
+Content-Type: application/json
+
+{
+  "solution": "解决的不错",
+  "homework": {
+  "id": "4"
+  }
+}
+###
+###
+//ok
+GET http://localhost:8080/api/myexaminfo
+Content-Type: application/json
+
+{
+   "id": "5"
+}
+###

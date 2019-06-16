@@ -26,6 +26,8 @@ public class User {
     @OneToMany(mappedBy = "teacher")
     List<Homework> homeworks;
     @OneToMany(mappedBy = "teacher")
+    List<HomeworkDetail> homeworkdetails;
+    @OneToMany(mappedBy = "teacher")
     List<ExamInfo> examinfos;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;

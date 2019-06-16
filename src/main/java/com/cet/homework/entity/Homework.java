@@ -24,7 +24,7 @@ public class Homework {
     // 任务内容，普通长度可能不够
     @Column(columnDefinition = "TEXT")
     private String content;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private User teacher;
     @OneToOne(mappedBy = "homework")
     private HomeworkDetail homeworkDetail;

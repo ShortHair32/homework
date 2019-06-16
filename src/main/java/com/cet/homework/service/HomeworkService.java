@@ -4,6 +4,7 @@ import com.cet.homework.entity.Homework;
 import com.cet.homework.entity.HomeworkDetail;
 import com.cet.homework.repository.HomeworkDetailRepository;
 import com.cet.homework.repository.HomeworkRepository;
+import com.cet.homework.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +19,8 @@ public class HomeworkService {
 
     @Autowired
     private HomeworkDetailRepository homeworkDetailRepository;
+    @Autowired
+    private UserRepository userRepository;
     //创建（发布）、也能修改
     public Homework addHomework(Homework homework) {
         homeworkRepository.save(homework);
@@ -36,8 +39,7 @@ public class HomeworkService {
 
     //关闭任务,根据任务id查
     public void close(int hid) {
-        Homework h = homeworkRepository.findHomeworkbyhid(hid);
-
+        Homework h = homeworkRepository.findById(hid).get();
         h.setState(Homework.OFF);
         homeworkRepository.save(h);
     }
@@ -49,6 +51,8 @@ public class HomeworkService {
 
     //完成任务
     public HomeworkDetail completehomework(HomeworkDetail homeworkDetail) {
+        //根据传入的homeworkid查teacher
+        homeworkDetail.setTeacher(homeworkRepository.findHomeworkbyhid(homeworkDetail.getHomework().getId()).getTeacher());
         homeworkDetailRepository.save(homeworkDetail);
         return homeworkDetailRepository.refresh(homeworkDetail);
     }
