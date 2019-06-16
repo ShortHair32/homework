@@ -1,44 +1,47 @@
+//ok
 POST http://localhost:8080/api/admin/usermanagement
 Content-Type: application/json
 
 {
-  "phone": "13832507114",
-  "name": "wang",
-  "password":"123456"
+  "phone": "1044919284177",
+  "name": "白欣宇",
+  "password":"blakegriffin32",
+  "authority": "1",
+  "post": "教授"
 }
 
 ###
-
+//ok
 POST http://localhost:8080/api/login
 Content-Type: application/json
 
 {
-  "phone": "1044919284",
-  "password": "blakegriffin32",
-  "authority": 2
+  "phone": "15546309826",
+  "password": "123456"
 }
 
 ###
+//ok
 POST http://localhost:8080/api/admin/register
 Content-Type: application/json
 
 {
-  "phone": "1044919284",
-  "name": "wangjiaqi",
-  "password":"blakegriffin32"
-
+  "phone": "15546309826",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "2"
 }
 
 ###
-###
-POST http://localhost:8080/api/admin/usermanagement
+//ok
+POST http://localhost:8080/api/admin/modify
 Content-Type: application/json
 
 {
-  "phone": "1044919284111",
-  "name": "wangjiaqi",
-  "password":"blakegriffin32"
-
+  "phone": "15546309826",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "1"
 }
 
 ###

@@ -30,6 +30,7 @@ public class AdminController {
     /**
      * 添加用户，并返回所有用户信息
      */
+    //ok
     @PostMapping("/usermanagement")
     public Map postUser(@RequestBody User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()) );
@@ -37,6 +38,7 @@ public class AdminController {
         return Map.of("users", userservice.listusers());
     }
     //管理员注册
+    //OK
     @PostMapping("/register")
     public void register(@RequestBody User user){
     user.setPassword(passwordEncoder.encode(user.getPassword()) );
@@ -46,9 +48,17 @@ public class AdminController {
     //也能改变人员权限
     //service层用了save，即相当于更新
     @PostMapping("/modify")
-    public void modify(@RequestBody User user){
-        user.setPassword(passwordEncoder.encode(user.getPassword()) );
-        userservice.addUser(user);
+    public void modify(@RequestBody User u){
+        u.setPassword(passwordEncoder.encode(u.getPassword()) );
+        User u1=new User();
+        u1.setId(userservice.getUser(u.getPhone()).getId());
+        u1.setPassword(u.getPassword());
+        u1.setAuthority(u.getAuthority());
+        u1.setName(u.getName());
+        u1.setPhone(u.getPhone());
+        u1.setDetail(u.getDetail());
+        u1.setPost(u.getPost());
+        userservice.addUser(u1);
     }
     //删除管理员（是将其权限降级还是删除这个人？）
     //根据手机号找到用户，再根据ID删除用户

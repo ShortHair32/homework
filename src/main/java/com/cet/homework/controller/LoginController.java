@@ -20,6 +20,7 @@ import java.util.Optional;
 @Slf4j
 @RestController
 @RequestMapping("/api")
+//OK
 public class LoginController {
     private static final String STUDENT_ROLE = "bb63e5f7e0f2ffae845c";
     private static final String ADMIN_ROLE = "6983f953b49c88210cb9";
@@ -44,7 +45,6 @@ public class LoginController {
                     // 生成加密token
                     String token = encryptorComponent.encrypt(map);
                     // 在header创建自定义的权限
-                    response.setHeader("uid", "u.getId()");
                     response.setHeader("token", token);
                     String role = null;
                     if (u.getAuthority() == User.USER_AUTHORITY) {

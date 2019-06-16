@@ -1,3 +1,176 @@
+POST http://localhost:8080/api/admin/modify
+Content-Type: application/json
+
+{
+  "phone": "15546309826",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "1"
+}
+
+###
+
+POST http://localhost:8080/api/admin/modify
+Content-Type: application/json
+
+{
+  "phone": "15546309826",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "1"
+}
+
+###
+
+POST http://localhost:8080/api/admin/modify
+Content-Type: application/json
+
+{
+  "phone": "15546309826",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "1"
+}
+
+###
+
+POST http://localhost:8080/api/admin/modify
+Content-Type: application/json
+
+{
+  "phone": "15546309826",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "1"
+}
+
+###
+
+POST http://localhost:8080/api/admin/usermanagement
+Content-Type: application/json
+
+{
+  "phone": "1044919284177",
+  "name": "白欣宇",
+  "password":"blakegriffin32",
+  "authority": "1",
+  "post": "教授"
+}
+
+<> 2019-06-16T050615.200.json
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "phone": "15546309826",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "phone": "15546309826",
+  "password": "12345"
+}
+
+<> 2019-06-16T045220.401.json
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "phone": "1554630982",
+  "password": "123456"
+}
+
+<> 2019-06-16T045154.401.json
+
+###
+
+POST http://localhost:8080/api/admin/usermanagement
+Content-Type: application/json
+
+{
+  "phone": "1044919284177",
+  "name": "白欣宇",
+  "password":"blakegriffin32",
+"authority": "1",
+  "post": "教授"
+}
+
+<> 2019-06-16T044149.401.json
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "phone": "15546309826",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:8080/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "15546309826",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "2"
+}
+
+###
+
+POST http://localhost:8080/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "15546309826",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "1"
+}
+
+###
+
+POST http://localhost:8080/api/admin/usermanagement
+Content-Type: application/json
+
+{
+  "phone": "1044919284177",
+  "name": "白欣宇",
+  "password":"blakegriffin32",
+"authority": "1",
+  "post": "教授"
+}
+
+<> 2019-06-16T043605.401.json
+
+###
+
+POST http://localhost:8080/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "1044919284",
+  "name": "wangjiaqi",
+  "password":"blakegriffin32"
+
+}
+
+###
+
 POST http://localhost:8080/api/admin/register
 Content-Type: application/json
 
@@ -446,126 +619,6 @@ Content-Type: application/json
 {
   "phone": "15546503308",
   "password": "123456"
-}
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-{:
-  "phone": "15546503308"
-  "password": "1234567"
-}:
-
-<> 2019-06-08T010118.400.html
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-{:
-  "phone": 15546503308
-  "password": 1234567
-}:
-
-<> 2019-06-08T125957.400.html
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-{:
-  "phone": 15546503308
-  "password": 123456
-}:
-
-<> 2019-06-08T125927.400.html
-
-###
-
-POST http://localhost:8080/api/login
-
-{
-"phone":15546503308
-"password":123456
-}
-
-<> 2019-06-08T125738.415.json
-
-###
-
-POST http://localhost:8080/api/login
-
-{
-"phone":15546503308
-"password":123456
-}
-
-###
-
-POST http://localhost:8080/api/login
-
-{
-"phone":15546503308
-"password":123456
-}
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-
-{
-  "phone": 123
-  "name": aaa
-}
-
-<> 2019-06-08T010754.401.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-
-{
-  "phone": 123
-  "name": aaa
-}
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-
-{
-  "phone": 123
-  "name": aaa
-}
-
-<> 2019-06-08T114959.401.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-
-{
-  "phone": 123
-  "name": aaa
-}
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-
-{
-  "phone": 123
-  "name": aaa
-}
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-
-{
-  "phone": 123
-  "name": aaa
 }
 
 ###

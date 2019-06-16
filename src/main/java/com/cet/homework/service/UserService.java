@@ -21,8 +21,7 @@ public class UserService {
     }
     //既能创建也能修改，万能SAVE
     public User addUser(User u){
-        userRepository.save(u);
-        return userRepository.refresh(u);
+        return userRepository.save(u);
     }
     //删除指定用户
     public void removeUser(int uid){
