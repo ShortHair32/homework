@@ -34,9 +34,9 @@ public class LoginController {
     //传入一个user的json
     public void login(@RequestBody Map<String,String> user, HttpServletResponse response) {
         //通过手机号get到用户，然后用passwordencoder中方法判断输入的密码和user中的密码是否匹配
-        Optional.ofNullable(userService.getUser(user.get("account")))
+        Optional.ofNullable(userService.getUser(user.get("phone")))
                 .ifPresentOrElse(u -> {
-                    if (!passwordEncoder.matches(user.get("pass"), u.getPassword())) {
+                    if (!passwordEncoder.matches(user.get("password"), u.getPassword())) {
                         throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
                     }
                     //用用户的id和职称构成map生成令牌
@@ -44,19 +44,7 @@ public class LoginController {
                     // 生成加密token
                     String token = encryptorComponent.encrypt(map);
                     // 在header创建自定义的权限
-                    User uu=userService.getUser(user.get("account"));
-                    String gid=String.valueOf(uu.getId());
-                    String gname=String.valueOf(uu.getName());
-                    String gpost=String.valueOf(uu.getPost());
-                    String gphone=String.valueOf(uu.getPhone());
-                    String gauthority=String.valueOf(uu.getAuthority());
-                    String gpassword=String.valueOf(uu.getPassword());
-                    response.setHeader("id","gid");
-                    response.setHeader("name","ganame");
-                    response.setHeader("title","gpost");
-                    response.setHeader("phone","gphone");
-                    response.setHeader("authority","gauthority");
-                    response.setHeader("pass","gpassword");
+                    response.setHeader("uid", "u.getId()");
                     response.setHeader("token", token);
                     String role = null;
                     if (u.getAuthority() == User.USER_AUTHORITY) {

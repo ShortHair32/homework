@@ -9,10 +9,17 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.annotation.PostConstruct;
+import java.util.TimeZone;
+
 @SpringBootApplication
 @EnableScheduling
 @EnableJpaRepositories(repositoryBaseClass = CustomizedRepositoryImpl.class)
 public class HomeworkApplication {
+    @PostConstruct
+    void started() {
+        TimeZone.setDefault(TimeZone.getTimeZone("Asia/Shanghai"));
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(HomeworkApplication.class, args);

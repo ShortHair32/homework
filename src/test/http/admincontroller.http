@@ -23,7 +23,7 @@ POST http://localhost:8080/api/admin/register
 Content-Type: application/json
 
 {
-  "phone": "1044919284111",
+  "phone": "1044919284",
   "name": "wangjiaqi",
   "password":"blakegriffin32"
 
