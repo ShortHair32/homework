@@ -1,6 +1,7 @@
 package com.cet.homework.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -19,7 +20,9 @@ public class ExamInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime beginTime;   /*起始时间*/
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime endTime;    /*结束时间*/
     private String classRoom;         /*地点*/
     private String className; /*课程*/

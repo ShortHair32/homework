@@ -1,3 +1,336 @@
+POST http://localhost:8080/api/admin/closehomework
+Content-Type: application/json
+
+{
+  "id": "1"
+}
+
+<> 2019-06-16T080438.400.json
+
+###
+
+POST http://localhost:8080/api/admin/removeadmin
+Content-Type: application/json
+
+{
+  "phone": "1044919284177"
+}
+
+<> 2019-06-16T080423.500.json
+
+###
+
+POST http://localhost:8080/api/admin/removeadmin
+Content-Type: application/json
+
+{
+  "phone": "1044919284177"
+}
+
+<> 2019-06-16T080334.500.json
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo/getExamInfo
+Content-Type: application/json
+
+{
+  "classroom": "910"
+}
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo/getExamInfo
+Content-Type: application/json
+
+{
+  "classroom": "910"
+}
+
+<> 2019-06-16T080019.400.json
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo/getExamInfo
+Content-Type: application/json
+
+{
+  "classroom": "910"
+}
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo/getExamInfo
+Content-Type: application/json
+
+{
+  "classroom": "910"
+}
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo/getExamInfo
+Content-Type: application/json
+
+{
+  "classroom": "910"
+}
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo
+Content-Type: application/json
+
+{
+  "beginTime": "2019-06-23 15:00",
+  "endTime": "2019-06-23 17:00",
+  "classRoom": "910",
+  "className": "SOA"
+}
+
+<> 2019-06-16T074636.200.json
+
+###
+
+GET http://localhost:8080/api/admin/ExamInfo/findExamInfo
+
+<> 2019-06-16T074406.200.json
+
+###
+
+GET http://localhost:8080/api/admin/ExamInfo/findExamInfo
+
+<> 2019-06-16T074201.200.json
+
+###
+
+GET http://localhost:8080/api/admin/ExamInfo/findExamInfo
+
+<> 2019-06-16T073718.200.json
+
+###
+
+GET http://localhost:8080/api/admin/ExamInfo/findExamInfo
+Content-Type: application/json
+
+<> 2019-06-16T073351.200.json
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo/findExamInfo
+Content-Type: application/json
+
+<> 2019-06-16T073235.200.json
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo/updateteacher
+Content-Type: application/json
+
+{
+  "id": "1",
+  "teacher": {
+  "id": "5"
+  }
+}
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo/updateteacher
+Content-Type: application/json
+
+{
+  "id": "1",
+  "teacher": {
+  "id": "3"
+  }
+}
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo/updateteacher
+Content-Type: application/json
+
+{
+  "teacher": {
+  "id": "3"
+  }
+}
+
+<> 2019-06-16T072616.500.json
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo
+Content-Type: application/json
+
+{
+  "beginTime": "2019-06-23 15:00",
+  "endTime": "2019-06-23 17:00",
+  "classRoom": "910",
+  "className": "SOA"
+}
+
+<> 2019-06-16T071534.200.json
+
+###
+
+POST http://localhost:8080/api/admin/ExamInfo
+Content-Type: application/json
+
+{
+  "beginTime": "2019-06-23 15:00",
+  "endTime": "2019-06-23 17:00",
+  "classRoom": "910",
+  "className": "SOA"
+}
+
+<> 2019-06-16T071342.400.json
+
+###
+
+POST http://localhost:8080/api/admin/closehomework
+Content-Type: application/json
+
+{
+  "id": "1"
+}
+
+<> 2019-06-16T070729.400.json
+
+###
+
+POST http://localhost:8080/api/admin/modifyhomework
+Content-Type: application/json
+
+{
+  "id": "1",
+  "content": "回复信息牛逼",
+  "teacher": {
+    "id": "3"
+  },
+  "title": "不紧急",
+  "deadLineTime": "2014-01-02 15:00"
+}
+
+###
+
+POST http://localhost:8080/api/admin/modifyhomework
+Content-Type: application/json
+
+{
+  "content": "回复信息牛逼",
+  "teacher": {
+    "id": "3"
+  },
+  "title": "紧急",
+  "deadLineTime": "2014-01-02 15:00"
+}
+
+###
+
+POST http://localhost:8080/api/admin/modifyhomework
+Content-Type: application/json
+
+{
+  "content": "回复信息",
+  "teacher": {
+    "id": "3"
+  },
+  "title": "不紧急",
+  "deadLineTime": "2014-01-02 15:00"
+}
+
+<> 2019-06-16T065351.500.json
+
+###
+
+POST http://localhost:8080/api/admin/addhomework
+Content-Type: application/json
+
+{
+  "content": "回复信息",
+  "teacher": {
+  "id": "3"
+  },
+  "title": "紧急",
+  "deadLineTime": "2014-01-02 15:00"
+}
+
+###
+
+POST http://localhost:8080/api/admin/addhomework
+Content-Type: application/json
+
+{
+  "content": "回复信息",
+  "teacher": {
+  "id": "3"
+  },
+  "title": "紧急",
+  "deadLineTime": "2014-01-02"
+}
+
+<> 2019-06-16T061449.400.json
+
+###
+
+POST http://localhost:8080/api/admin/removeadmin
+Content-Type: application/json
+
+{
+  "phone": "1044919284177"
+}
+
+<> 2019-06-16T060241.400.json
+
+###
+
+POST http://localhost:8080/api/admin/removeadmin
+Content-Type: application/json
+
+{
+  "phone": "1044919284177"
+}
+
+<> 2019-06-16T054811.400.json
+
+###
+
+POST http://localhost:8080/api/admin/removeadmin
+Content-Type: application/json
+
+{
+  "phone": "1044919284177"
+}
+
+<> 2019-06-16T054315.400.json
+
+###
+
+POST http://localhost:8080/api/admin/removeadmin
+Content-Type: application/json
+
+{
+  "phone": "1044919284177"
+}
+
+<> 2019-06-16T054052.400.json
+
+###
+
+POST http://localhost:8080/api/admin/removeadmin
+Content-Type: application/json
+
+{
+  "phone": "1044919284177"
+
+}
+
+<> 2019-06-16T054021.400.json
+
+###
+
 POST http://localhost:8080/api/admin/modify
 Content-Type: application/json
 
@@ -250,376 +583,6 @@ Content-Type: application/json
 }
 
 <> 2019-06-14T072233.404.html
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "1044919284",
-  "password": "blakegriffin32",
-  "authority": 2
-}
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "1044919284",
-  "password": "blakegriffin3",
-  "authority": 2
-}
-
-<> 2019-06-08T022948.401.json
-
-###
-
-POST http://localhost:8080/api/admin/register
-Content-Type: application/json
-
-{
-  "phone": "1044919284",
-  "name": "wangjiaqi",
-  "password":"blakegriffin32"
-}
-
-###
-
-POST http://localhost:8080/api/admin/register
-Content-Type: application/json
-
-{
-  "phone": "1044919284",
-  "name": "wangjiaqi",
-  "password":"blakegriffin32"
-}
-
-<> 2019-06-08T022805.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "1044919284",
-  "password": "blakegriffin32",
-  "authority": 2
-}
-
-###
-
-POST http://localhost:8080/api/admin/register
-Content-Type: application/json
-
-{
-  "phone": "1044919284",
-  "name": "wangjiaqi",
-  "password":"blakegriffin32"
-}
-
-###
-
-POST http://localhost:8080/api/admin/register
-Content-Type: application/json
-
-{
-  "phone": "1044919284",
-  "name": "wangjiaqi",
-  "password":"blakegriffin32"
-}
-
-<> 2019-06-08T022035.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T020427.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T020352.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T020339.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T020316.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T015815.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T015759.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T015659.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T015421.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T014939.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T014759.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T014724.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T014709.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T014040.401.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-Content-Type: application/json
-
-{
-  "phone": "13832507114",
-  "name": "wang",
-  "password":"123456"
-}
-
-<> 2019-06-08T013422.200.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-
-{
-  "phone": "13832507114",
-  "name": "wang"
-  "password":"123456"
-}
-
-<> 2019-06-08T013355.415.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-
-{
-  "phone": "13832507114",
-  "name": "wang"
-  "password":"123456"
-}
-
-<> 2019-06-08T013313.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456",
-  "authority": 2
-}
-
-<> 2019-06-08T011424.401.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-
-{
-  "phone": "13832507114",
-  "name": "wang"
-  "password":"123456"
-}
-
-<> 2019-06-08T011256.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456"
-}
-
-<> 2019-06-08T010443.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456"
-}
-
-<> 2019-06-08T010309.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "password": "123456"
-}
 
 ###
 

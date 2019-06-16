@@ -14,7 +14,7 @@ import java.util.List;
 public interface UserRepository extends CustomizedRepository<User, Integer>{
     //根据手机号查找用户
     @Query("SELECT u FROM User u WHERE u.phone=:phone")
-    public User findUser(@Param("phone") String phone);
+     User findUser(@Param("phone") String phone);
     //列出所有用户
     @Query("SELECT u FROM User u")
     public List<User> listusers();

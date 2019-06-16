@@ -22,13 +22,12 @@ public class ExamInfoService {
         examInfoRepository.save(e);
         return examInfoRepository.refresh(e);
     }
+    //分配、重新分配教师
     public ExamInfo updateExamInfo(ExamInfo examInfo) {
-        return Optional.ofNullable(examInfoRepository.findExamInfo(examInfo.getClassRoom()))
-                .or(() -> {
-                    throw new ResponseStatusException(HttpStatus.FORBIDDEN, "无权限");
-                })
-                .map(a -> examInfoRepository.save(examInfo))
-                .get();
+        ExamInfo e=examInfoRepository.findById(examInfo.getId()).get();
+        e.setTeacher(examInfo.getTeacher());
+        e.setStatus(2);
+        return examInfoRepository.save(e);
     }
 
     public  ExamInfo getExamInfo(String classroom){return examInfoRepository.findExamInfo(classroom);}

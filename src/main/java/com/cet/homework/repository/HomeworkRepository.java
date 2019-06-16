@@ -24,4 +24,7 @@ public interface HomeworkRepository extends CustomizedRepository<Homework, Integ
     //根据任务id查找homework完成情况
     @Query("SELECT hd FROM HomeworkDetail hd WHERE hd.homework.id=:hid")
     HomeworkDetail findhomeworkdetailbyhomeworkid(@Param("hid") int hid);
+    //根据标题查找任务
+    @Query("SELECT h FROM Homework h WHERE h.title=:title")
+    Homework findhomeworkbytitle(@Param("title") String title);
 }
