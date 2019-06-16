@@ -12,7 +12,8 @@ import org.springframework.stereotype.Component;
 public class TimeService {
     @Autowired
     private ExamInfoRepository examInfoRepository;
-    @Scheduled(cron="0 0 8 * * *")
+    //@Scheduled(cron="0 0 8 * * *")
+    @Scheduled(cron="2 * * * * ?")
     public void MyTimer(){
 
         for(ExamInfo e:examInfoRepository.querytomorrowexaminfo()){
