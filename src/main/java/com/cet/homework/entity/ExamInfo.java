@@ -41,4 +41,7 @@ public class ExamInfo {
     public ExamInfo(int id) {
         this.id= id;
     }
+    public ExamInfo(String classroom) {
+        this.classRoom= classroom;
+    }
 }

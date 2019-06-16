@@ -1,11 +1,12 @@
 //ok
 POST http://localhost:8080/api/admin/usermanagement
+token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
 Content-Type: application/json
 
 {
-  "phone": "1044919284177",
-  "name": "白欣宇",
-  "password":"blakegriffin32",
+  "phone": "139556",
+  "name": "宏",
+  "password":"123456",
   "authority": "1",
   "post": "教授"
 }
@@ -16,7 +17,7 @@ POST http://localhost:8080/api/login
 Content-Type: application/json
 
 {
-  "phone": "15546309826",
+  "phone": "15546309816",
   "password": "123456"
 }
 
@@ -26,8 +27,8 @@ POST http://localhost:8080/api/admin/register
 Content-Type: application/json
 
 {
-  "phone": "15546309826",
-  "name": "白欣宇",
+  "phone": "15546309816",
+  "name": "白欣",
   "password":"123456",
   "authority": "2"
 }
@@ -57,11 +58,12 @@ Content-Type: application/json
 ###
 //ok
 POST http://localhost:8080/api/admin/addhomework
+token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
 Content-Type: application/json
 
 
 {
-  "content": "打人",
+  "content": "fgfhgj",
   "teacher": {
   "id": "3"
   },
