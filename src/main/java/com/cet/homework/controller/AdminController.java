@@ -72,6 +72,7 @@ public class AdminController {
     //关闭任务
     //??
     @PostMapping("/closehomework")
+
     public void closehomework(@RequestBody int id){
         homeworkService.close(id);
     }
@@ -102,12 +103,13 @@ public class AdminController {
     }
     //查找所有考试信息
     @GetMapping("/ExamInfo/findExamInfo")
+    @ResponseBody
     public Map findExamInfo() {
         return Map.of("examInfo",examInfoService.listexamInfos());
     }
     //根据教室查找考试信息
     @PostMapping("/ExamInfo/getExamInfo")
-    public ExamInfo getExamInfo(@RequestBody String classroom) {
+    public ExamInfo getExamInfo(@RequestParam(name="classroom") String classroom) {
         return examInfoService.getExamInfo(classroom);
     }
 
