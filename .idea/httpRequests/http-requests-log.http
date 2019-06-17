@@ -1,3 +1,55 @@
+POST http://localhost:8888/api/admin/usermanagement
+token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
+Content-Type: application/json
+
+{
+  "phone": "1044919284",
+  "name": "王嘉奇",
+  "password":"123456",
+  "authority": "2",
+  "post": "教授"
+}
+
+<> 2019-06-17T113859.200.json
+
+###
+
+POST http://localhost:8888/api/admin/ExamInfo/getExamInfo
+token: 61425173e1efba7ad0bbf235265222190106439defbbb539ba77371c24242893a6b4148bcd65c17d2d2236f34721cf9d
+Content-Type: application/json
+
+{
+  "classRoom":"111"
+}
+
+<> 2019-06-17T113735.200.json
+
+###
+
+POST http://localhost:8888/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "1044919284",
+  "name": "王",
+  "password":"123456",
+  "authority": "2"
+}
+
+###
+
+POST http://localhost:8888/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "15546503308",
+  "name": "王",
+  "password":"123456",
+  "authority": "2"
+}
+
+###
+
 GET http://localhost:8888/api/myexaminfo
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 Content-Type: application/json
@@ -563,63 +615,6 @@ Content-Type: application/json
 }
 
 <> 2019-06-17T090100.200.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546309816",
-  "password": "123456"
-}
-
-<> 2019-06-17T090005.404.html
-
-###
-
-POST http://localhost:8888/api/admin/usermanagement
-token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "name": "王嘉奇",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T085830.200.json
-
-###
-
-POST http://localhost:8888/api/admin/ExamInfo/updateteacher
-token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
-Content-Type: application/json
-
-{
-  "id": "1",
-  "teacher": {
-  "id": "5"
-  }
-}
-
-###
-
-POST http://localhost:8888/api/admin/usermanagement
-token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
-Content-Type: application/json
-
-{
-  "phone": "15546503308",
-  "name": "王嘉奇",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T084839.200.json
 
 ###
 

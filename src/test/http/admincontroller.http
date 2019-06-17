@@ -5,10 +5,10 @@ token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a4
 Content-Type: application/json
 
 {
-  "phone": "15546503308",
+  "phone": "1044919284",
   "name": "王嘉奇",
   "password":"123456",
-  "authority": "1",
+  "authority": "2",
   "post": "教授"
 }
 ###
@@ -28,10 +28,10 @@ POST http://localhost:8888/api/admin/register
 Content-Type: application/json
 
 {
-  "phone": "1554630",
-  "name": "白",
+  "phone": "1044919284",
+  "name": "王",
   "password":"123456",
-  "authority": "1"
+  "authority": "2"
 }
 
 ###
