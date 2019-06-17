@@ -1,116 +1,109 @@
-POST http://localhost:8080/api/admin/usermanagement
+GET http://localhost:8888/api/myexaminfo
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 Content-Type: application/json
 
 {
-  "phone": "1234567",
-  "name": "王",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
+   "id": "10"
 }
 
-<> 2019-06-17T070109.415.json
+<> 2019-06-17T094754.200.json
 
 ###
 
-POST http://localhost:8080/api/domyhomework
+GET http://localhost:8888/api/myexaminfo
+Content-Type: application/json
+
+{
+   "id": "10"
+}
+
+<> 2019-06-17T094743.401.json
+
+###
+
+POST http://localhost:8888/api/admin/ExamInfo/updateteacher
+token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
+Content-Type: application/json
+
+{
+  "id": "3",
+  "teacher": {
+  "id": "10"
+  }
+}
+
+###
+
+POST http://localhost:8888/api/domyhomework
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 Content-Type: application/json
 
 {
   "solution": "解决的不错",
   "homework": {
-  "id": "6"
+  "id": "5"
   }
 }
 
-<> 2019-06-17T065309.415.json
-
 ###
 
-POST http://localhost:8080/api/domyhomework
+GET http://localhost:8888/api/myhomework
+token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
 Content-Type: application/json
 
 {
-  "solution": "解决的不错",
-  "homework": {
-  "id": "6"
-  }
+  "id": "10"
 }
 
-<> 2019-06-17T065256.401.json
+<> 2019-06-17T094328.200.json
 
 ###
 
-POST http://localhost:8080/api/usermodify
+GET http://localhost:8888/api/myhomework
+Content-Type: application/json
+
+{
+  "id": "10"
+}
+
+<> 2019-06-17T094304.401.json
+
+###
+
+GET http://localhost:8888/api/allhomework
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
-Content-Type: application/json
 
-{
-"id": "5",
-  "phone": "15546309826",
-  "name": "白",
-  "password":"123456",
-  "authority": "1"
-}
-
-<> 2019-06-17T065203.415.json
-
-###
-
-POST http://localhost:8080/api/usermodify
-Content-Type: application/json
-
-{
-"id": "5",
-  "phone": "15546309826",
-  "name": "白",
-  "password":"123456",
-  "authority": "1"
-}
-
-<> 2019-06-17T065152.401.json
+<> 2019-06-17T094013.200.json
 
 ###
 
 GET http://localhost:8080/api/allhomework
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 
-<> 2019-06-17T065119.200.json
+<> 2019-06-17T094004.404.html
 
 ###
 
-GET http://localhost:8080/api/allhomework
-token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
-
-<> 2019-06-17T064919.200.json
-
-###
-
-GET http://localhost:8080/api/allhomework
-
-<> 2019-06-17T064904.401.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
+POST http://localhost:8888/api/admin/ExamInfo/getExamInfo
+token: 61425173e1efba7ad0bbf235265222190106439defbbb539ba77371c24242893a6b4148bcd65c17d2d2236f34721cf9d
 Content-Type: application/json
 
 {
-  "phone": "1234567",
-  "name": "王",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
+  "classRoom":"111"
 }
 
-<> 2019-06-17T064732.404.json
+<> 2019-06-17T093843.200.json
 
 ###
 
-POST http://localhost:8080/api/admin/ExamInfo
+GET http://localhost:8888/api/admin/ExamInfo/findExamInfo
+token: 61425173e1efba7ad0bbf235265222190106439defbbb539ba77371c24242893a6b4148bcd65c17d2d2236f34721cf9d
+
+<> 2019-06-17T093813.200.json
+
+###
+
+POST http://localhost:8888/api/admin/ExamInfo
 token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
 Content-Type: application/json
 
@@ -121,22 +114,199 @@ Content-Type: application/json
   "className": "WEB"
 }
 
-<> 2019-06-17T064648.200.json
+<> 2019-06-17T093745.200.json
 
 ###
 
-POST http://localhost:8080/api/admin/ExamInfo
-token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
+POST http://localhost:8888/api/admin/closehomework
+token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
 Content-Type: application/json
 
 {
-  "beginTime": "2019-06-18 8:00",
-  "endTime": "2019-06-18 10:00",
-  "classRoom": "111",
-  "className": "WEB"
+  "id": "5"
 }
 
-<> 2019-06-17T064625.400.json
+###
+
+POST http://localhost:8888/api/admin/modifyhomework
+token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
+Content-Type: application/json
+
+{
+  "id": "5",
+  "content": "SHUIJIAO",
+  "teacher": {
+    "id": "10"
+  },
+  "title": "紧急",
+  "deadLineTime": "2014-01-02 15:00"
+}
+
+###
+
+POST http://localhost:8888/api/admin/modifyhomework
+token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
+Content-Type: application/json
+
+{
+  "id": "5",
+  "content": "223344",
+  "teacher": {
+    "id": "11"
+  },
+  "title": "不紧急",
+  "deadLineTime": "2014-01-02 15:00"
+}
+
+###
+
+POST http://localhost:8888/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "1554630",
+  "name": "白",
+  "password":"123456",
+  "authority": "1"
+}
+
+###
+
+POST http://localhost:8888/api/admin/modifyhomework
+token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
+Content-Type: application/json
+
+{
+  "id": "5",
+  "content": "223344",
+  "teacher": {
+    "id": "1"
+  },
+  "title": "不紧急",
+  "deadLineTime": "2014-01-02 15:00"
+}
+
+###
+
+POST http://localhost:8888/api/admin/addhomework
+token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
+Content-Type: application/json
+
+{
+  "content": "112233",
+  "teacher": {
+  "id": "10"
+  },
+  "title": "一般紧急",
+  "deadLineTime": "2014-01-02 15:00"
+}
+
+###
+
+POST http://localhost:8888/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "15546309816",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "1"
+}
+
+###
+
+POST http://localhost:8888/api/admin/addhomework
+token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
+Content-Type: application/json
+
+{
+  "content": "112233",
+  "teacher": {
+  "id": "3"
+  },
+  "title": "一般紧急",
+  "deadLineTime": "2014-01-02 15:00"
+}
+
+<> 2019-06-17T092928.500.json
+
+###
+
+POST http://localhost:8888/api/admin/removeadmin
+token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
+Content-Type: application/json
+
+{
+  "phone": "15546309816"
+}
+
+###
+
+POST http://localhost:8888/api/admin/modify
+token: a86e7d466119b51873d0e10069d3aabc2abea302771f9a03cd5bac9f28ad48f848d3e03cd2eda8371d4905c45a160f21
+Content-Type: application/json
+
+{
+  "phone": "15546309816",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "1"
+}
+
+###
+
+POST http://localhost:8888/api/login
+Content-Type: application/json
+
+{
+  "phone": "15546309816",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:8888/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "15546309816",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "2"
+}
+
+###
+
+POST http://localhost:8888/api/admin/modify
+Content-Type: application/json
+
+{
+  "phone": "15546309816",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "1"
+}
+
+<> 2019-06-17T092604.401.json
+
+###
+
+GET http://localhost:8888/api/admin/ExamInfo/findExamInfo
+token: 61425173e1efba7ad0bbf235265222190106439defbbb539ba77371c24242893a6b4148bcd65c17d2d2236f34721cf9d
+
+<> 2019-06-17T092115.200.json
+
+###
+
+POST http://localhost:8888/api/admin/ExamInfo/getExamInfo
+token: 61425173e1efba7ad0bbf235265222190106439defbbb539ba77371c24242893a6b4148bcd65c17d2d2236f34721cf9d
+Content-Type: application/json
+
+{
+  "classRoom":"911"
+}
+
+<> 2019-06-17T091951.500.json
 
 ###
 
@@ -148,31 +318,18 @@ Content-Type: application/json
   "classRoom":"911"
 }
 
-<> 2019-06-17T064545.200.json
+<> 2019-06-17T091943.404.html
 
 ###
 
-GET http://localhost:8080/api/admin/ExamInfo/findExamInfo
+GET http://localhost:8888/api/admin/ExamInfo/findExamInfo
 token: 61425173e1efba7ad0bbf235265222190106439defbbb539ba77371c24242893a6b4148bcd65c17d2d2236f34721cf9d
 
-<> 2019-06-17T064424.200.json
+<> 2019-06-17T091846.200.json
 
 ###
 
-POST http://localhost:8080/api/admin/ExamInfo/updateteacher
-token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
-Content-Type: application/json
-
-{
-  "id": "3",
-  "teacher": {
-  "id": "16"
-  }
-}
-
-###
-
-POST http://localhost:8080/api/admin/ExamInfo/updateteacher
+POST http://localhost:8888/api/admin/ExamInfo/updateteacher
 token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
 Content-Type: application/json
 
@@ -183,60 +340,59 @@ Content-Type: application/json
   }
 }
 
-<> 2019-06-17T064252.500.json
-
 ###
 
-POST http://localhost:8080/api/admin/ExamInfo/updateteacher
-Content-Type: application/json
-
-{
-  "id": "2",
-  "teacher": {
-  "id": "5"
-  }
-}
-
-<> 2019-06-17T064241.401.json
-
-###
-
-POST http://localhost:8080/api/admin/ExamInfo
+POST http://localhost:8888/api/admin/ExamInfo
 token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
 Content-Type: application/json
 
 {
-  "beginTime": "2019-06-18 8:00",
-  "endTime": "2019-06-18 10:00",
+  "beginTime": "2019-06-18 10:00",
+  "endTime": "2019-06-18 12:00",
   "classRoom": "111",
   "className": "WEB"
 }
 
-<> 2019-06-17T064131.400.json
+<> 2019-06-17T091650.200.json
 
 ###
 
-POST http://localhost:8080/api/admin/closehomework
+POST http://localhost:8888/api/admin/closehomework
 token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
 Content-Type: application/json
 
 {
-  "id": "7"
+  "id": "3"
 }
 
 ###
 
-POST http://localhost:8080/api/admin/modifyhomework
+POST http://localhost:8888/api/admin/modifyhomework
 token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
 Content-Type: application/json
 
 {
-  "id": "7",
+  "id": "3",
   "content": "223344",
   "teacher": {
     "id": "3"
   },
   "title": "不紧急",
+  "deadLineTime": "2014-01-02 15:00"
+}
+
+###
+
+POST http://localhost:8888/api/admin/addhomework
+token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
+Content-Type: application/json
+
+{
+  "content": "112233",
+  "teacher": {
+  "id": "3"
+  },
+  "title": "一般紧急",
   "deadLineTime": "2014-01-02 15:00"
 }
 
@@ -255,24 +411,38 @@ Content-Type: application/json
   "deadLineTime": "2014-01-02 15:00"
 }
 
+<> 2019-06-17T091420.404.html
+
 ###
 
-POST http://localhost:8080/api/admin/removeadmin
+POST http://localhost:8888/api/admin/removeadmin
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 Content-Type: application/json
 
 {
-  "phone": "1044919284177"
+  "phone": "15546309816"
 }
 
 ###
 
-POST http://localhost:8080/api/admin/modify
+POST http://localhost:8888/api/admin/modify
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 Content-Type: application/json
 
 {
-  "phone": "15546309826",
+  "phone": "15546309816",
+  "name": "白欣宇",
+  "password":"123456",
+  "authority": "1"
+}
+
+###
+
+POST http://localhost:8888/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "15546309816",
   "name": "白欣宇",
   "password":"123456",
   "authority": "2"
@@ -280,17 +450,53 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8080/api/admin/modify
+POST http://localhost:8888/api/login
 Content-Type: application/json
 
 {
-  "phone": "15546309826",
+  "phone": "15546503308",
+  "password": "123456"
+}
+
+<> 2019-06-17T090824.500.json
+
+###
+
+POST http://localhost:8888/api/login
+Content-Type: application/json
+
+{
+  "phone": "15546503308",
+  "password": "123456"
+}
+
+<> 2019-06-17T090744.500.json
+
+###
+
+POST http://localhost:8888/api/login
+Content-Type: application/json
+
+{
+  "phone": "13832507114",
+  "password": "123456"
+}
+
+<> 2019-06-17T090703.401.json
+
+###
+
+POST http://localhost:8080/api/admin/register
+Content-Type: application/json
+
+{
+  "phone": "15546309816",
   "name": "白欣宇",
   "password":"123456",
   "authority": "2"
 }
 
-<> 2019-06-17T063813.401.json
+<> 2019-06-17T090529.404.html
 
 ###
 
@@ -298,11 +504,37 @@ POST http://localhost:8080/api/admin/register
 Content-Type: application/json
 
 {
-  "phone": "15546309817",
-  "name": "白欣11",
+  "phone": "15546309816",
+  "name": "白欣宇",
   "password":"123456",
   "authority": "2"
 }
+
+<> 2019-06-17T090453.404.html
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "phone": "13832507114",
+  "password": "123456"
+}
+
+<> 2019-06-17T090335.404.html
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "phone": "13832507114",
+  "password": "123456"
+}
+
+<> 2019-06-17T090304.404.html
 
 ###
 
@@ -314,189 +546,23 @@ Content-Type: application/json
   "password": "123456"
 }
 
+<> 2019-06-17T090211.404.html
+
 ###
 
-POST http://localhost:8080/api/admin/usermanagement
+POST http://localhost:8888/api/admin/usermanagement
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 Content-Type: application/json
 
 {
-  "phone": "1234567",
-  "name": "王",
+  "phone": "15546503308",
+  "name": "王嘉奇",
   "password":"123456",
   "authority": "1",
   "post": "教授"
 }
 
-<> 2019-06-17T063701.404.json
-
-###
-
-POST http://localhost:8080/api/admin/ExamInfo
-token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
-Content-Type: application/json
-
-{
-  "beginTime": "2019-06-18 8:00",
-  "endTime": "2019-06-18 10:00",
-  "classRoom": "111",
-  "className": "WEB"
-}
-
-<> 2019-06-17T063609.400.json
-
-###
-
-POST http://localhost:8080/api/admin/ExamInfo
-token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
-Content-Type: application/json
-
-{
-  "beginTime": "2019-06-18 8:00",
-  "endTime": "2019-06-18 10:00",
-  "classRoom": "111",
-  "className": "WEB"
-}
-
-<> 2019-06-17T063443.400.json
-
-###
-
-POST http://localhost:8080/api/admin/ExamInfo
-token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
-Content-Type: application/json
-
-{
-  "beginTime": "2019-06-18 8:00",
-  "endTime": "2019-06-18 10:00",
-  "classRoom": "111",
-  "className": "WEB"
-}
-
-<> 2019-06-17T063411.400.json
-
-###
-
-POST http://localhost:8080/api/admin/ExamInfo/getExamInfo
-token: 61425173e1efba7ad0bbf235265222190106439defbbb539ba77371c24242893a6b4148bcd65c17d2d2236f34721cf9d
-Content-Type: application/json
-
-{
-  "classRoom":"910"
-}
-
-<> 2019-06-17T063148.200.json
-
-###
-
-GET http://localhost:8080/api/admin/ExamInfo/findExamInfo
-token: 61425173e1efba7ad0bbf235265222190106439defbbb539ba77371c24242893a6b4148bcd65c17d2d2236f34721cf9d
-
-<> 2019-06-17T063127.200.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
-Content-Type: application/json
-
-{
-  "phone": "1234567",
-  "name": "王",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T063103.404.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
-Content-Type: application/json
-
-{
-  "phone": "1234567",
-  "name": "王",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T063037.404.json
-
-###
-
-POST http://localhost:8080/api/admin/register
-Content-Type: application/json
-
-{
-  "phone": "15546309817",
-  "name": "白欣11",
-  "password":"123456",
-  "authority": "2"
-}
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
-Content-Type: application/json
-
-{
-  "phone": "1234567",
-  "name": "王",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T062937.404.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
-Content-Type: application/json
-
-{
-  "phone": "1234567",
-  "name": "王",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T062859.404.json
-
-###
-
-POST http://localhost:8080/api/admin/register
-Content-Type: application/json
-
-{
-  "phone": "15546309817",
-  "name": "白欣11",
-  "password":"123456",
-  "authority": "2"
-}
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
-Content-Type: application/json
-
-{
-  "phone": "1234567",
-  "name": "王",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T062817.404.json
+<> 2019-06-17T090100.200.json
 
 ###
 
@@ -508,164 +574,52 @@ Content-Type: application/json
   "password": "123456"
 }
 
+<> 2019-06-17T090005.404.html
+
 ###
 
-POST http://localhost:8080/api/admin/register
+POST http://localhost:8888/api/admin/usermanagement
+token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 Content-Type: application/json
 
 {
-  "phone": "15546309817",
-  "name": "白欣11",
+  "phone": "15546503308",
+  "name": "王嘉奇",
   "password":"123456",
-  "authority": "2"
+  "authority": "1",
+  "post": "教授"
 }
 
-<> 2019-06-17T062530.415.json
+<> 2019-06-17T085830.200.json
 
 ###
 
-POST http://localhost:8080/api/admin/usermanagement
+POST http://localhost:8888/api/admin/ExamInfo/updateteacher
 token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
 Content-Type: application/json
 
 {
-  "phone": "1234567",
-  "name": "王",
+  "id": "1",
+  "teacher": {
+  "id": "5"
+  }
+}
+
+###
+
+POST http://localhost:8888/api/admin/usermanagement
+token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
+Content-Type: application/json
+
+{
+  "phone": "15546503308",
+  "name": "王嘉奇",
   "password":"123456",
   "authority": "1",
   "post": "教授"
 }
 
-<> 2019-06-17T062409.404.json
-
-###
-
-POST http://localhost:8080/api/admin/ExamInfo
-token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
-Content-Type: application/json
-
-{
-  "beginTime": "2019-06-18 8:00",
-  "endTime": "2019-06-18 10:00",
-  "classRoom": "111",
-  "className": "WEB"
-}
-
-<> 2019-06-17T062346.415.json
-
-###
-
-POST http://localhost:8080/api/admin/ExamInfo
-Content-Type: application/json
-
-{
-  "beginTime": "2019-06-18 8:00",
-  "endTime": "2019-06-18 10:00",
-  "classRoom": "111",
-  "className": "WEB"
-}
-
-<> 2019-06-17T062327.401.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
-Content-Type: application/json
-
-{
-  "phone": "1234567",
-  "name": "王",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T061141.404.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546309816",
-  "password": "123456"
-}
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-token: 97450d020af4cc3de22641ddc3b08dce612b1ba7a46dc4eb5307ce3b2a6d6671667ff2ed12b9981fef3b206de0b2c4bf
-Content-Type: application/json
-
-{
-  "phone": "1234567",
-  "name": "王",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T061055.404.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-token: 97450d020af4cc3de22641ddc3b08dce612b1ba7a46dc4eb5307ce3b2a6d6671667ff2ed12b9981fef3b206de0b2c4bf
-Content-Type: application/json
-
-{
-  "phone": "1234567",
-  "name": "王",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T060648.415.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "phone": "15546309816",
-  "password": "123456"
-}
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
-Content-Type: application/json
-
-{
-  "phone": "1234567",
-  "name": "王",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T060603.415.json
-
-###
-
-POST http://localhost:8080/api/admin/usermanagement
-token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
-Content-Type: application/json
-
-{
-  "phone": "123456",
-  "name": "边",
-  "password":"123456",
-  "authority": "1",
-  "post": "教授"
-}
-
-<> 2019-06-17T060332.200.json
+<> 2019-06-17T084839.200.json
 
 ###
 

@@ -31,13 +31,6 @@ public interface ExamInfoRepository extends CustomizedRepository<ExamInfo, Integ
     //查询教师分配给自己的监考任务（通知短信）
     @Query("SELECT e FROM ExamInfo e WHERE e.teacher.id=:tid")
     List<ExamInfo> queryownexaminfo(@Param("tid") int tid);
-    //查询第二天的考试信息
-    Calendar now =Calendar.getInstance();
-    int year=now.get(Calendar.YEAR);
-    int month=now.get(Calendar.MONTH);
-    int day=now.get(Calendar.DAY_OF_MONTH);
-    String today=String.valueOf(year)+"-"+String.valueOf(month)+"-"+String.valueOf(day);
-    String tomorrow =String.valueOf(year)+"-"+String.valueOf(month)+"-"+String.valueOf(day+1);
-        @Query("SELECT e FROM ExamInfo e WHERE e.beginTime between today and tomorrow")
-                List<ExamInfo> querytomorrowexaminfo();
+        @Query("SELECT e FROM ExamInfo e WHERE e.beginTime between :today and :tomorrow")
+                List<ExamInfo> querytomorrowexaminfo(@Param("today") String today,@Param("tomorrow") String tomorrow);
 }

@@ -1,20 +1,20 @@
 ###
-//??404
-POST http://localhost:8080/api/admin/usermanagement
+//??404 大量日志
+POST http://localhost:8888/api/admin/usermanagement
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 Content-Type: application/json
 
 {
-  "phone": "1234567",
-  "name": "王",
+  "phone": "15546503308",
+  "name": "王嘉奇",
   "password":"123456",
   "authority": "1",
   "post": "教授"
 }
 ###
 ###
-//ok
-POST http://localhost:8080/api/login
+//ok 500
+POST http://localhost:8888/api/login
 Content-Type: application/json
 
 {
@@ -24,42 +24,42 @@ Content-Type: application/json
 
 ###
 //ok
-POST http://localhost:8080/api/admin/register
+POST http://localhost:8888/api/admin/register
 Content-Type: application/json
 
 {
-  "phone": "15546309817",
-  "name": "白欣11",
+  "phone": "1554630",
+  "name": "白",
   "password":"123456",
-  "authority": "2"
+  "authority": "1"
 }
 
 ###
 //ok
-POST http://localhost:8080/api/admin/modify
-token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
+POST http://localhost:8888/api/admin/modify
+token: a86e7d466119b51873d0e10069d3aabc2abea302771f9a03cd5bac9f28ad48f848d3e03cd2eda8371d4905c45a160f21
 Content-Type: application/json
 
 {
-  "phone": "15546309826",
+  "phone": "15546309816",
   "name": "白欣宇",
   "password":"123456",
-  "authority": "2"
+  "authority": "1"
 }
 
 ###
 //ok
-POST http://localhost:8080/api/admin/removeadmin
+POST http://localhost:8888/api/admin/removeadmin
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 Content-Type: application/json
 
 {
-  "phone": "1044919284177"
+  "phone": "15546309816"
 }
 
 ###
 //ok
-POST http://localhost:8080/api/admin/addhomework
+POST http://localhost:8888/api/admin/addhomework
 token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
 Content-Type: application/json
 
@@ -67,7 +67,7 @@ Content-Type: application/json
 {
   "content": "112233",
   "teacher": {
-  "id": "3"
+  "id": "10"
   },
   "title": "一般紧急",
   "deadLineTime": "2014-01-02 15:00"
@@ -75,33 +75,33 @@ Content-Type: application/json
 ###
 ###
 //ok
-POST http://localhost:8080/api/admin/modifyhomework
+POST http://localhost:8888/api/admin/modifyhomework
 token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
 Content-Type: application/json
 
 
 {
-  "id": "7",
-  "content": "223344",
+  "id": "5",
+  "content": "SHUIJIAO",
   "teacher": {
-    "id": "3"
+    "id": "10"
   },
-  "title": "不紧急",
+  "title": "紧急",
   "deadLineTime": "2014-01-02 15:00"
 }
 ###
 //ok
-POST http://localhost:8080/api/admin/closehomework
+POST http://localhost:8888/api/admin/closehomework
 token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
 Content-Type: application/json
 
 {
-  "id": "7"
+  "id": "5"
 }
 ###
 ###
-//ok
-POST http://localhost:8080/api/admin/ExamInfo
+//？？？
+POST http://localhost:8888/api/admin/ExamInfo
 token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
 Content-Type: application/json
 
@@ -114,29 +114,29 @@ Content-Type: application/json
 ###
 ###
 //ok
-POST http://localhost:8080/api/admin/ExamInfo/updateteacher
+POST http://localhost:8888/api/admin/ExamInfo/updateteacher
 token: e485341ff021010bab0d90027a27bb3241756e2139c1a0c21eb2b37bfdcfd7d4b7c10892a1cd793841aa0b4ea6fcc0fb
 Content-Type: application/json
 
 {
   "id": "3",
   "teacher": {
-  "id": "16"
+  "id": "10"
   }
 }
 ###
 ###
-//ok
-GET http://localhost:8080/api/admin/ExamInfo/findExamInfo
+//？？？？
+GET http://localhost:8888/api/admin/ExamInfo/findExamInfo
 token: 61425173e1efba7ad0bbf235265222190106439defbbb539ba77371c24242893a6b4148bcd65c17d2d2236f34721cf9d
 ###
 ###
 //ok
-POST http://localhost:8080/api/admin/ExamInfo/getExamInfo
+POST http://localhost:8888/api/admin/ExamInfo/getExamInfo
 token: 61425173e1efba7ad0bbf235265222190106439defbbb539ba77371c24242893a6b4148bcd65c17d2d2236f34721cf9d
 Content-Type: application/json
 
 {
-  "classRoom":"911"
+  "classRoom":"111"
 }
 ###

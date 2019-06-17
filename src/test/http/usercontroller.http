@@ -1,6 +1,6 @@
 ###
 //ok
-GET http://localhost:8080/api/allhomework
+GET http://localhost:8888/api/allhomework
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 ###
 ###
@@ -19,32 +19,34 @@ Content-Type: application/json
 ###
 ###
 //??
-GET http://localhost:8080/api/myhomework
+GET http://localhost:8888/api/myhomework
+token: 0664a7413852db420f512fe57cf214b71d342bdc260068eec1c24fe83f0888d36a6d3f17a46a84fa5fccbce23ccb79b8
 Content-Type: application/json
 
 {
-  "id": "3"
+  "id": "10"
 }
 ###
 ###
 //ok
-POST http://localhost:8080/api/domyhomework
+POST http://localhost:8888/api/domyhomework
 token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 Content-Type: application/json
 
 {
   "solution": "解决的不错",
   "homework": {
-  "id": "6"
+  "id": "5"
   }
 }
 ###
 ###
 //ok
-GET http://localhost:8080/api/myexaminfo
+GET http://localhost:8888/api/myexaminfo
+token: e808372451eeb40a530b5d884a0357d8783424d304421dadb2787c2e506eee16b057991a46d0eea18a20af7f18e0a54c
 Content-Type: application/json
 
 {
-   "id": "5"
+   "id": "10"
 }
 ###
